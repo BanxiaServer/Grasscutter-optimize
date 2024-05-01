@@ -356,8 +356,8 @@ public class GameMainQuest {
                 .setParentQuestId(getParentQuestId())
                 .setIsFinished(isFinished());
 
-            proto.setParentQuestState(getState().getValue())
-                .setCutsceneEncryptionKey(QuestManager.getQuestKey(parentQuestId));
+            proto.setParentQuestState(getState().getValue());// 标记 这里分号应该删掉
+                //.setCutsceneEncryptionKey(QuestManager.getQuestKey(parentQuestId)); 标记
             for (GameQuest quest : this.getChildQuests().values()) {
                 if (quest.getState() != QuestState.QUEST_STATE_UNSTARTED) {
                     ChildQuest childQuest = ChildQuest.newBuilder()

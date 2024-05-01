@@ -53,19 +53,12 @@ public final class EntityFightPropUpdateNotifyOuterClass {
         int key);
 
     /**
-     * <code>uint32 entity_id = 13;</code>
+     * <code>uint32 entity_id = 4;</code>
      * @return The entityId.
      */
     int getEntityId();
   }
   /**
-   * <pre>
-   * CmdId: 1235
-   * EnetChannelId: 0
-   * EnetIsReliable: false
-   * IsAllowClient: true
-   * </pre>
-   *
    * Protobuf type {@code EntityFightPropUpdateNotify}
    */
   public static final class EntityFightPropUpdateNotify extends
@@ -111,7 +104,7 @@ public final class EntityFightPropUpdateNotifyOuterClass {
             case 0:
               done = true;
               break;
-            case 104: {
+            case 32: {
 
               entityId_ = input.readUInt32();
               break;
@@ -254,10 +247,10 @@ public final class EntityFightPropUpdateNotifyOuterClass {
       return map.get(key);
     }
 
-    public static final int ENTITY_ID_FIELD_NUMBER = 13;
+    public static final int ENTITY_ID_FIELD_NUMBER = 4;
     private int entityId_;
     /**
-     * <code>uint32 entity_id = 13;</code>
+     * <code>uint32 entity_id = 4;</code>
      * @return The entityId.
      */
     @java.lang.Override
@@ -280,7 +273,7 @@ public final class EntityFightPropUpdateNotifyOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (entityId_ != 0) {
-        output.writeUInt32(13, entityId_);
+        output.writeUInt32(4, entityId_);
       }
       com.google.protobuf.GeneratedMessageV3
         .serializeIntegerMapTo(
@@ -299,7 +292,7 @@ public final class EntityFightPropUpdateNotifyOuterClass {
       size = 0;
       if (entityId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(13, entityId_);
+          .computeUInt32Size(4, entityId_);
       }
       for (java.util.Map.Entry<java.lang.Integer, java.lang.Float> entry
            : internalGetFightPropMap().getMap().entrySet()) {
@@ -443,13 +436,6 @@ public final class EntityFightPropUpdateNotifyOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 1235
-     * EnetChannelId: 0
-     * EnetIsReliable: false
-     * IsAllowClient: true
-     * </pre>
-     *
      * Protobuf type {@code EntityFightPropUpdateNotify}
      */
     public static final class Builder extends
@@ -755,7 +741,7 @@ public final class EntityFightPropUpdateNotifyOuterClass {
 
       private int entityId_ ;
       /**
-       * <code>uint32 entity_id = 13;</code>
+       * <code>uint32 entity_id = 4;</code>
        * @return The entityId.
        */
       @java.lang.Override
@@ -763,7 +749,7 @@ public final class EntityFightPropUpdateNotifyOuterClass {
         return entityId_;
       }
       /**
-       * <code>uint32 entity_id = 13;</code>
+       * <code>uint32 entity_id = 4;</code>
        * @param value The entityId to set.
        * @return This builder for chaining.
        */
@@ -774,7 +760,7 @@ public final class EntityFightPropUpdateNotifyOuterClass {
         return this;
       }
       /**
-       * <code>uint32 entity_id = 13;</code>
+       * <code>uint32 entity_id = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearEntityId() {
@@ -858,7 +844,7 @@ public final class EntityFightPropUpdateNotifyOuterClass {
       "\n!EntityFightPropUpdateNotify.proto\"\255\001\n\033" +
       "EntityFightPropUpdateNotify\022F\n\016fight_pro" +
       "p_map\030\017 \003(\0132..EntityFightPropUpdateNotif" +
-      "y.FightPropMapEntry\022\021\n\tentity_id\030\r \001(\r\0323" +
+      "y.FightPropMapEntry\022\021\n\tentity_id\030\004 \001(\r\0323" +
       "\n\021FightPropMapEntry\022\013\n\003key\030\001 \001(\r\022\r\n\005valu" +
       "e\030\002 \001(\002:\0028\001B\033\n\031emu.grasscutter.net.proto" +
       "b\006proto3"

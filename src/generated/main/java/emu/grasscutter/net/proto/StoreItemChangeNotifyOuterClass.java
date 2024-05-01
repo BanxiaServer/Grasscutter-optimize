@@ -19,6 +19,30 @@ public final class StoreItemChangeNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <code>repeated .Item item_list = 1;</code>
+     */
+    java.util.List<emu.grasscutter.net.proto.ItemOuterClass.Item> 
+        getItemListList();
+    /**
+     * <code>repeated .Item item_list = 1;</code>
+     */
+    emu.grasscutter.net.proto.ItemOuterClass.Item getItemList(int index);
+    /**
+     * <code>repeated .Item item_list = 1;</code>
+     */
+    int getItemListCount();
+    /**
+     * <code>repeated .Item item_list = 1;</code>
+     */
+    java.util.List<? extends emu.grasscutter.net.proto.ItemOuterClass.ItemOrBuilder> 
+        getItemListOrBuilderList();
+    /**
+     * <code>repeated .Item item_list = 1;</code>
+     */
+    emu.grasscutter.net.proto.ItemOuterClass.ItemOrBuilder getItemListOrBuilder(
+        int index);
+
+    /**
      * <code>.StoreType store_type = 12;</code>
      * @return The enum numeric value on the wire for storeType.
      */
@@ -28,39 +52,8 @@ public final class StoreItemChangeNotifyOuterClass {
      * @return The storeType.
      */
     emu.grasscutter.net.proto.StoreTypeOuterClass.StoreType getStoreType();
-
-    /**
-     * <code>repeated .Item item_list = 10;</code>
-     */
-    java.util.List<emu.grasscutter.net.proto.ItemOuterClass.Item> 
-        getItemListList();
-    /**
-     * <code>repeated .Item item_list = 10;</code>
-     */
-    emu.grasscutter.net.proto.ItemOuterClass.Item getItemList(int index);
-    /**
-     * <code>repeated .Item item_list = 10;</code>
-     */
-    int getItemListCount();
-    /**
-     * <code>repeated .Item item_list = 10;</code>
-     */
-    java.util.List<? extends emu.grasscutter.net.proto.ItemOuterClass.ItemOrBuilder> 
-        getItemListOrBuilderList();
-    /**
-     * <code>repeated .Item item_list = 10;</code>
-     */
-    emu.grasscutter.net.proto.ItemOuterClass.ItemOrBuilder getItemListOrBuilder(
-        int index);
   }
   /**
-   * <pre>
-   * CmdId: 612
-   * EnetChannelId: 0
-   * EnetIsReliable: false
-   * IsAllowClient: true
-   * </pre>
-   *
    * Protobuf type {@code StoreItemChangeNotify}
    */
   public static final class StoreItemChangeNotify extends
@@ -73,8 +66,8 @@ public final class StoreItemChangeNotifyOuterClass {
       super(builder);
     }
     private StoreItemChangeNotify() {
-      storeType_ = 0;
       itemList_ = java.util.Collections.emptyList();
+      storeType_ = 0;
     }
 
     @java.lang.Override
@@ -108,7 +101,7 @@ public final class StoreItemChangeNotifyOuterClass {
             case 0:
               done = true;
               break;
-            case 82: {
+            case 10: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 itemList_ = new java.util.ArrayList<emu.grasscutter.net.proto.ItemOuterClass.Item>();
                 mutable_bitField0_ |= 0x00000001;
@@ -158,6 +151,46 @@ public final class StoreItemChangeNotifyOuterClass {
               emu.grasscutter.net.proto.StoreItemChangeNotifyOuterClass.StoreItemChangeNotify.class, emu.grasscutter.net.proto.StoreItemChangeNotifyOuterClass.StoreItemChangeNotify.Builder.class);
     }
 
+    public static final int ITEM_LIST_FIELD_NUMBER = 1;
+    private java.util.List<emu.grasscutter.net.proto.ItemOuterClass.Item> itemList_;
+    /**
+     * <code>repeated .Item item_list = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<emu.grasscutter.net.proto.ItemOuterClass.Item> getItemListList() {
+      return itemList_;
+    }
+    /**
+     * <code>repeated .Item item_list = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends emu.grasscutter.net.proto.ItemOuterClass.ItemOrBuilder> 
+        getItemListOrBuilderList() {
+      return itemList_;
+    }
+    /**
+     * <code>repeated .Item item_list = 1;</code>
+     */
+    @java.lang.Override
+    public int getItemListCount() {
+      return itemList_.size();
+    }
+    /**
+     * <code>repeated .Item item_list = 1;</code>
+     */
+    @java.lang.Override
+    public emu.grasscutter.net.proto.ItemOuterClass.Item getItemList(int index) {
+      return itemList_.get(index);
+    }
+    /**
+     * <code>repeated .Item item_list = 1;</code>
+     */
+    @java.lang.Override
+    public emu.grasscutter.net.proto.ItemOuterClass.ItemOrBuilder getItemListOrBuilder(
+        int index) {
+      return itemList_.get(index);
+    }
+
     public static final int STORE_TYPE_FIELD_NUMBER = 12;
     private int storeType_;
     /**
@@ -177,46 +210,6 @@ public final class StoreItemChangeNotifyOuterClass {
       return result == null ? emu.grasscutter.net.proto.StoreTypeOuterClass.StoreType.UNRECOGNIZED : result;
     }
 
-    public static final int ITEM_LIST_FIELD_NUMBER = 10;
-    private java.util.List<emu.grasscutter.net.proto.ItemOuterClass.Item> itemList_;
-    /**
-     * <code>repeated .Item item_list = 10;</code>
-     */
-    @java.lang.Override
-    public java.util.List<emu.grasscutter.net.proto.ItemOuterClass.Item> getItemListList() {
-      return itemList_;
-    }
-    /**
-     * <code>repeated .Item item_list = 10;</code>
-     */
-    @java.lang.Override
-    public java.util.List<? extends emu.grasscutter.net.proto.ItemOuterClass.ItemOrBuilder> 
-        getItemListOrBuilderList() {
-      return itemList_;
-    }
-    /**
-     * <code>repeated .Item item_list = 10;</code>
-     */
-    @java.lang.Override
-    public int getItemListCount() {
-      return itemList_.size();
-    }
-    /**
-     * <code>repeated .Item item_list = 10;</code>
-     */
-    @java.lang.Override
-    public emu.grasscutter.net.proto.ItemOuterClass.Item getItemList(int index) {
-      return itemList_.get(index);
-    }
-    /**
-     * <code>repeated .Item item_list = 10;</code>
-     */
-    @java.lang.Override
-    public emu.grasscutter.net.proto.ItemOuterClass.ItemOrBuilder getItemListOrBuilder(
-        int index) {
-      return itemList_.get(index);
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -232,7 +225,7 @@ public final class StoreItemChangeNotifyOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       for (int i = 0; i < itemList_.size(); i++) {
-        output.writeMessage(10, itemList_.get(i));
+        output.writeMessage(1, itemList_.get(i));
       }
       if (storeType_ != emu.grasscutter.net.proto.StoreTypeOuterClass.StoreType.STORE_TYPE_NONE.getNumber()) {
         output.writeEnum(12, storeType_);
@@ -248,7 +241,7 @@ public final class StoreItemChangeNotifyOuterClass {
       size = 0;
       for (int i = 0; i < itemList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(10, itemList_.get(i));
+          .computeMessageSize(1, itemList_.get(i));
       }
       if (storeType_ != emu.grasscutter.net.proto.StoreTypeOuterClass.StoreType.STORE_TYPE_NONE.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
@@ -269,9 +262,9 @@ public final class StoreItemChangeNotifyOuterClass {
       }
       emu.grasscutter.net.proto.StoreItemChangeNotifyOuterClass.StoreItemChangeNotify other = (emu.grasscutter.net.proto.StoreItemChangeNotifyOuterClass.StoreItemChangeNotify) obj;
 
-      if (storeType_ != other.storeType_) return false;
       if (!getItemListList()
           .equals(other.getItemListList())) return false;
+      if (storeType_ != other.storeType_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -283,12 +276,12 @@ public final class StoreItemChangeNotifyOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + STORE_TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + storeType_;
       if (getItemListCount() > 0) {
         hash = (37 * hash) + ITEM_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getItemListList().hashCode();
       }
+      hash = (37 * hash) + STORE_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + storeType_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -385,13 +378,6 @@ public final class StoreItemChangeNotifyOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 612
-     * EnetChannelId: 0
-     * EnetIsReliable: false
-     * IsAllowClient: true
-     * </pre>
-     *
      * Protobuf type {@code StoreItemChangeNotify}
      */
     public static final class Builder extends
@@ -430,14 +416,14 @@ public final class StoreItemChangeNotifyOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        storeType_ = 0;
-
         if (itemListBuilder_ == null) {
           itemList_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           itemListBuilder_.clear();
         }
+        storeType_ = 0;
+
         return this;
       }
 
@@ -465,7 +451,6 @@ public final class StoreItemChangeNotifyOuterClass {
       public emu.grasscutter.net.proto.StoreItemChangeNotifyOuterClass.StoreItemChangeNotify buildPartial() {
         emu.grasscutter.net.proto.StoreItemChangeNotifyOuterClass.StoreItemChangeNotify result = new emu.grasscutter.net.proto.StoreItemChangeNotifyOuterClass.StoreItemChangeNotify(this);
         int from_bitField0_ = bitField0_;
-        result.storeType_ = storeType_;
         if (itemListBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             itemList_ = java.util.Collections.unmodifiableList(itemList_);
@@ -475,6 +460,7 @@ public final class StoreItemChangeNotifyOuterClass {
         } else {
           result.itemList_ = itemListBuilder_.build();
         }
+        result.storeType_ = storeType_;
         onBuilt();
         return result;
       }
@@ -523,9 +509,6 @@ public final class StoreItemChangeNotifyOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.StoreItemChangeNotifyOuterClass.StoreItemChangeNotify other) {
         if (other == emu.grasscutter.net.proto.StoreItemChangeNotifyOuterClass.StoreItemChangeNotify.getDefaultInstance()) return this;
-        if (other.storeType_ != 0) {
-          setStoreTypeValue(other.getStoreTypeValue());
-        }
         if (itemListBuilder_ == null) {
           if (!other.itemList_.isEmpty()) {
             if (itemList_.isEmpty()) {
@@ -551,6 +534,9 @@ public final class StoreItemChangeNotifyOuterClass {
               itemListBuilder_.addAllMessages(other.itemList_);
             }
           }
+        }
+        if (other.storeType_ != 0) {
+          setStoreTypeValue(other.getStoreTypeValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -581,6 +567,246 @@ public final class StoreItemChangeNotifyOuterClass {
         return this;
       }
       private int bitField0_;
+
+      private java.util.List<emu.grasscutter.net.proto.ItemOuterClass.Item> itemList_ =
+        java.util.Collections.emptyList();
+      private void ensureItemListIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          itemList_ = new java.util.ArrayList<emu.grasscutter.net.proto.ItemOuterClass.Item>(itemList_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          emu.grasscutter.net.proto.ItemOuterClass.Item, emu.grasscutter.net.proto.ItemOuterClass.Item.Builder, emu.grasscutter.net.proto.ItemOuterClass.ItemOrBuilder> itemListBuilder_;
+
+      /**
+       * <code>repeated .Item item_list = 1;</code>
+       */
+      public java.util.List<emu.grasscutter.net.proto.ItemOuterClass.Item> getItemListList() {
+        if (itemListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(itemList_);
+        } else {
+          return itemListBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .Item item_list = 1;</code>
+       */
+      public int getItemListCount() {
+        if (itemListBuilder_ == null) {
+          return itemList_.size();
+        } else {
+          return itemListBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .Item item_list = 1;</code>
+       */
+      public emu.grasscutter.net.proto.ItemOuterClass.Item getItemList(int index) {
+        if (itemListBuilder_ == null) {
+          return itemList_.get(index);
+        } else {
+          return itemListBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .Item item_list = 1;</code>
+       */
+      public Builder setItemList(
+          int index, emu.grasscutter.net.proto.ItemOuterClass.Item value) {
+        if (itemListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureItemListIsMutable();
+          itemList_.set(index, value);
+          onChanged();
+        } else {
+          itemListBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Item item_list = 1;</code>
+       */
+      public Builder setItemList(
+          int index, emu.grasscutter.net.proto.ItemOuterClass.Item.Builder builderForValue) {
+        if (itemListBuilder_ == null) {
+          ensureItemListIsMutable();
+          itemList_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          itemListBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Item item_list = 1;</code>
+       */
+      public Builder addItemList(emu.grasscutter.net.proto.ItemOuterClass.Item value) {
+        if (itemListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureItemListIsMutable();
+          itemList_.add(value);
+          onChanged();
+        } else {
+          itemListBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Item item_list = 1;</code>
+       */
+      public Builder addItemList(
+          int index, emu.grasscutter.net.proto.ItemOuterClass.Item value) {
+        if (itemListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureItemListIsMutable();
+          itemList_.add(index, value);
+          onChanged();
+        } else {
+          itemListBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Item item_list = 1;</code>
+       */
+      public Builder addItemList(
+          emu.grasscutter.net.proto.ItemOuterClass.Item.Builder builderForValue) {
+        if (itemListBuilder_ == null) {
+          ensureItemListIsMutable();
+          itemList_.add(builderForValue.build());
+          onChanged();
+        } else {
+          itemListBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Item item_list = 1;</code>
+       */
+      public Builder addItemList(
+          int index, emu.grasscutter.net.proto.ItemOuterClass.Item.Builder builderForValue) {
+        if (itemListBuilder_ == null) {
+          ensureItemListIsMutable();
+          itemList_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          itemListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Item item_list = 1;</code>
+       */
+      public Builder addAllItemList(
+          java.lang.Iterable<? extends emu.grasscutter.net.proto.ItemOuterClass.Item> values) {
+        if (itemListBuilder_ == null) {
+          ensureItemListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, itemList_);
+          onChanged();
+        } else {
+          itemListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Item item_list = 1;</code>
+       */
+      public Builder clearItemList() {
+        if (itemListBuilder_ == null) {
+          itemList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          itemListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Item item_list = 1;</code>
+       */
+      public Builder removeItemList(int index) {
+        if (itemListBuilder_ == null) {
+          ensureItemListIsMutable();
+          itemList_.remove(index);
+          onChanged();
+        } else {
+          itemListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Item item_list = 1;</code>
+       */
+      public emu.grasscutter.net.proto.ItemOuterClass.Item.Builder getItemListBuilder(
+          int index) {
+        return getItemListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .Item item_list = 1;</code>
+       */
+      public emu.grasscutter.net.proto.ItemOuterClass.ItemOrBuilder getItemListOrBuilder(
+          int index) {
+        if (itemListBuilder_ == null) {
+          return itemList_.get(index);  } else {
+          return itemListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .Item item_list = 1;</code>
+       */
+      public java.util.List<? extends emu.grasscutter.net.proto.ItemOuterClass.ItemOrBuilder> 
+           getItemListOrBuilderList() {
+        if (itemListBuilder_ != null) {
+          return itemListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(itemList_);
+        }
+      }
+      /**
+       * <code>repeated .Item item_list = 1;</code>
+       */
+      public emu.grasscutter.net.proto.ItemOuterClass.Item.Builder addItemListBuilder() {
+        return getItemListFieldBuilder().addBuilder(
+            emu.grasscutter.net.proto.ItemOuterClass.Item.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Item item_list = 1;</code>
+       */
+      public emu.grasscutter.net.proto.ItemOuterClass.Item.Builder addItemListBuilder(
+          int index) {
+        return getItemListFieldBuilder().addBuilder(
+            index, emu.grasscutter.net.proto.ItemOuterClass.Item.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Item item_list = 1;</code>
+       */
+      public java.util.List<emu.grasscutter.net.proto.ItemOuterClass.Item.Builder> 
+           getItemListBuilderList() {
+        return getItemListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          emu.grasscutter.net.proto.ItemOuterClass.Item, emu.grasscutter.net.proto.ItemOuterClass.Item.Builder, emu.grasscutter.net.proto.ItemOuterClass.ItemOrBuilder> 
+          getItemListFieldBuilder() {
+        if (itemListBuilder_ == null) {
+          itemListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              emu.grasscutter.net.proto.ItemOuterClass.Item, emu.grasscutter.net.proto.ItemOuterClass.Item.Builder, emu.grasscutter.net.proto.ItemOuterClass.ItemOrBuilder>(
+                  itemList_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          itemList_ = null;
+        }
+        return itemListBuilder_;
+      }
 
       private int storeType_ = 0;
       /**
@@ -634,246 +860,6 @@ public final class StoreItemChangeNotifyOuterClass {
         storeType_ = 0;
         onChanged();
         return this;
-      }
-
-      private java.util.List<emu.grasscutter.net.proto.ItemOuterClass.Item> itemList_ =
-        java.util.Collections.emptyList();
-      private void ensureItemListIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          itemList_ = new java.util.ArrayList<emu.grasscutter.net.proto.ItemOuterClass.Item>(itemList_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          emu.grasscutter.net.proto.ItemOuterClass.Item, emu.grasscutter.net.proto.ItemOuterClass.Item.Builder, emu.grasscutter.net.proto.ItemOuterClass.ItemOrBuilder> itemListBuilder_;
-
-      /**
-       * <code>repeated .Item item_list = 10;</code>
-       */
-      public java.util.List<emu.grasscutter.net.proto.ItemOuterClass.Item> getItemListList() {
-        if (itemListBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(itemList_);
-        } else {
-          return itemListBuilder_.getMessageList();
-        }
-      }
-      /**
-       * <code>repeated .Item item_list = 10;</code>
-       */
-      public int getItemListCount() {
-        if (itemListBuilder_ == null) {
-          return itemList_.size();
-        } else {
-          return itemListBuilder_.getCount();
-        }
-      }
-      /**
-       * <code>repeated .Item item_list = 10;</code>
-       */
-      public emu.grasscutter.net.proto.ItemOuterClass.Item getItemList(int index) {
-        if (itemListBuilder_ == null) {
-          return itemList_.get(index);
-        } else {
-          return itemListBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <code>repeated .Item item_list = 10;</code>
-       */
-      public Builder setItemList(
-          int index, emu.grasscutter.net.proto.ItemOuterClass.Item value) {
-        if (itemListBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureItemListIsMutable();
-          itemList_.set(index, value);
-          onChanged();
-        } else {
-          itemListBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Item item_list = 10;</code>
-       */
-      public Builder setItemList(
-          int index, emu.grasscutter.net.proto.ItemOuterClass.Item.Builder builderForValue) {
-        if (itemListBuilder_ == null) {
-          ensureItemListIsMutable();
-          itemList_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          itemListBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Item item_list = 10;</code>
-       */
-      public Builder addItemList(emu.grasscutter.net.proto.ItemOuterClass.Item value) {
-        if (itemListBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureItemListIsMutable();
-          itemList_.add(value);
-          onChanged();
-        } else {
-          itemListBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Item item_list = 10;</code>
-       */
-      public Builder addItemList(
-          int index, emu.grasscutter.net.proto.ItemOuterClass.Item value) {
-        if (itemListBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureItemListIsMutable();
-          itemList_.add(index, value);
-          onChanged();
-        } else {
-          itemListBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Item item_list = 10;</code>
-       */
-      public Builder addItemList(
-          emu.grasscutter.net.proto.ItemOuterClass.Item.Builder builderForValue) {
-        if (itemListBuilder_ == null) {
-          ensureItemListIsMutable();
-          itemList_.add(builderForValue.build());
-          onChanged();
-        } else {
-          itemListBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Item item_list = 10;</code>
-       */
-      public Builder addItemList(
-          int index, emu.grasscutter.net.proto.ItemOuterClass.Item.Builder builderForValue) {
-        if (itemListBuilder_ == null) {
-          ensureItemListIsMutable();
-          itemList_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          itemListBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Item item_list = 10;</code>
-       */
-      public Builder addAllItemList(
-          java.lang.Iterable<? extends emu.grasscutter.net.proto.ItemOuterClass.Item> values) {
-        if (itemListBuilder_ == null) {
-          ensureItemListIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, itemList_);
-          onChanged();
-        } else {
-          itemListBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Item item_list = 10;</code>
-       */
-      public Builder clearItemList() {
-        if (itemListBuilder_ == null) {
-          itemList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-          onChanged();
-        } else {
-          itemListBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Item item_list = 10;</code>
-       */
-      public Builder removeItemList(int index) {
-        if (itemListBuilder_ == null) {
-          ensureItemListIsMutable();
-          itemList_.remove(index);
-          onChanged();
-        } else {
-          itemListBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Item item_list = 10;</code>
-       */
-      public emu.grasscutter.net.proto.ItemOuterClass.Item.Builder getItemListBuilder(
-          int index) {
-        return getItemListFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .Item item_list = 10;</code>
-       */
-      public emu.grasscutter.net.proto.ItemOuterClass.ItemOrBuilder getItemListOrBuilder(
-          int index) {
-        if (itemListBuilder_ == null) {
-          return itemList_.get(index);  } else {
-          return itemListBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .Item item_list = 10;</code>
-       */
-      public java.util.List<? extends emu.grasscutter.net.proto.ItemOuterClass.ItemOrBuilder> 
-           getItemListOrBuilderList() {
-        if (itemListBuilder_ != null) {
-          return itemListBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(itemList_);
-        }
-      }
-      /**
-       * <code>repeated .Item item_list = 10;</code>
-       */
-      public emu.grasscutter.net.proto.ItemOuterClass.Item.Builder addItemListBuilder() {
-        return getItemListFieldBuilder().addBuilder(
-            emu.grasscutter.net.proto.ItemOuterClass.Item.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .Item item_list = 10;</code>
-       */
-      public emu.grasscutter.net.proto.ItemOuterClass.Item.Builder addItemListBuilder(
-          int index) {
-        return getItemListFieldBuilder().addBuilder(
-            index, emu.grasscutter.net.proto.ItemOuterClass.Item.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .Item item_list = 10;</code>
-       */
-      public java.util.List<emu.grasscutter.net.proto.ItemOuterClass.Item.Builder> 
-           getItemListBuilderList() {
-        return getItemListFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          emu.grasscutter.net.proto.ItemOuterClass.Item, emu.grasscutter.net.proto.ItemOuterClass.Item.Builder, emu.grasscutter.net.proto.ItemOuterClass.ItemOrBuilder> 
-          getItemListFieldBuilder() {
-        if (itemListBuilder_ == null) {
-          itemListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              emu.grasscutter.net.proto.ItemOuterClass.Item, emu.grasscutter.net.proto.ItemOuterClass.Item.Builder, emu.grasscutter.net.proto.ItemOuterClass.ItemOrBuilder>(
-                  itemList_,
-                  ((bitField0_ & 0x00000001) != 0),
-                  getParentForChildren(),
-                  isClean());
-          itemList_ = null;
-        }
-        return itemListBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -944,8 +930,8 @@ public final class StoreItemChangeNotifyOuterClass {
     java.lang.String[] descriptorData = {
       "\n\033StoreItemChangeNotify.proto\032\nItem.prot" +
       "o\032\017StoreType.proto\"Q\n\025StoreItemChangeNot" +
-      "ify\022\036\n\nstore_type\030\014 \001(\0162\n.StoreType\022\030\n\ti" +
-      "tem_list\030\n \003(\0132\005.ItemB\033\n\031emu.grasscutter" +
+      "ify\022\030\n\titem_list\030\001 \003(\0132\005.Item\022\036\n\nstore_t" +
+      "ype\030\014 \001(\0162\n.StoreTypeB\033\n\031emu.grasscutter" +
       ".net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -959,7 +945,7 @@ public final class StoreItemChangeNotifyOuterClass {
     internal_static_StoreItemChangeNotify_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_StoreItemChangeNotify_descriptor,
-        new java.lang.String[] { "StoreType", "ItemList", });
+        new java.lang.String[] { "ItemList", "StoreType", });
     emu.grasscutter.net.proto.ItemOuterClass.getDescriptor();
     emu.grasscutter.net.proto.StoreTypeOuterClass.getDescriptor();
   }

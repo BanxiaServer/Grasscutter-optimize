@@ -19,46 +19,46 @@ public final class AbilityInvokeEntryHeadOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int32 modifier_config_local_id = 7;</code>
-     * @return The modifierConfigLocalId.
-     */
-    int getModifierConfigLocalId();
-
-    /**
-     * <code>bool is_serverbuff_modifier = 2;</code>
-     * @return The isServerbuffModifier.
-     */
-    boolean getIsServerbuffModifier();
-
-    /**
-     * <code>uint32 instanced_ability_id = 1;</code>
-     * @return The instancedAbilityId.
-     */
-    int getInstancedAbilityId();
-
-    /**
-     * <code>uint32 instanced_modifier_id = 12;</code>
-     * @return The instancedModifierId.
-     */
-    int getInstancedModifierId();
-
-    /**
-     * <code>int32 local_id = 10;</code>
-     * @return The localId.
-     */
-    int getLocalId();
-
-    /**
-     * <code>uint32 server_buff_uid = 14;</code>
+     * <code>uint32 server_buff_uid = 1;</code>
      * @return The serverBuffUid.
      */
     int getServerBuffUid();
 
     /**
-     * <code>uint32 target_id = 3;</code>
+     * <code>int32 modifier_config_local_id = 9;</code>
+     * @return The modifierConfigLocalId.
+     */
+    int getModifierConfigLocalId();
+
+    /**
+     * <code>int32 local_id = 6;</code>
+     * @return The localId.
+     */
+    int getLocalId();
+
+    /**
+     * <code>uint32 target_id = 4;</code>
      * @return The targetId.
      */
     int getTargetId();
+
+    /**
+     * <code>bool is_serverbuff_modifier = 10;</code>
+     * @return The isServerbuffModifier.
+     */
+    boolean getIsServerbuffModifier();
+
+    /**
+     * <code>uint32 instanced_ability_id = 2;</code>
+     * @return The instancedAbilityId.
+     */
+    int getInstancedAbilityId();
+
+    /**
+     * <code>uint32 instanced_modifier_id = 5;</code>
+     * @return The instancedModifierId.
+     */
+    int getInstancedModifierId();
   }
   /**
    * Protobuf type {@code AbilityInvokeEntryHead}
@@ -107,37 +107,37 @@ public final class AbilityInvokeEntryHeadOuterClass {
               break;
             case 8: {
 
-              instancedAbilityId_ = input.readUInt32();
+              serverBuffUid_ = input.readUInt32();
               break;
             }
             case 16: {
 
-              isServerbuffModifier_ = input.readBool();
+              instancedAbilityId_ = input.readUInt32();
               break;
             }
-            case 24: {
+            case 32: {
 
               targetId_ = input.readUInt32();
               break;
             }
-            case 56: {
+            case 40: {
+
+              instancedModifierId_ = input.readUInt32();
+              break;
+            }
+            case 48: {
+
+              localId_ = input.readInt32();
+              break;
+            }
+            case 72: {
 
               modifierConfigLocalId_ = input.readInt32();
               break;
             }
             case 80: {
 
-              localId_ = input.readInt32();
-              break;
-            }
-            case 96: {
-
-              instancedModifierId_ = input.readUInt32();
-              break;
-            }
-            case 112: {
-
-              serverBuffUid_ = input.readUInt32();
+              isServerbuffModifier_ = input.readBool();
               break;
             }
             default: {
@@ -172,65 +172,10 @@ public final class AbilityInvokeEntryHeadOuterClass {
               emu.grasscutter.net.proto.AbilityInvokeEntryHeadOuterClass.AbilityInvokeEntryHead.class, emu.grasscutter.net.proto.AbilityInvokeEntryHeadOuterClass.AbilityInvokeEntryHead.Builder.class);
     }
 
-    public static final int MODIFIER_CONFIG_LOCAL_ID_FIELD_NUMBER = 7;
-    private int modifierConfigLocalId_;
-    /**
-     * <code>int32 modifier_config_local_id = 7;</code>
-     * @return The modifierConfigLocalId.
-     */
-    @java.lang.Override
-    public int getModifierConfigLocalId() {
-      return modifierConfigLocalId_;
-    }
-
-    public static final int IS_SERVERBUFF_MODIFIER_FIELD_NUMBER = 2;
-    private boolean isServerbuffModifier_;
-    /**
-     * <code>bool is_serverbuff_modifier = 2;</code>
-     * @return The isServerbuffModifier.
-     */
-    @java.lang.Override
-    public boolean getIsServerbuffModifier() {
-      return isServerbuffModifier_;
-    }
-
-    public static final int INSTANCED_ABILITY_ID_FIELD_NUMBER = 1;
-    private int instancedAbilityId_;
-    /**
-     * <code>uint32 instanced_ability_id = 1;</code>
-     * @return The instancedAbilityId.
-     */
-    @java.lang.Override
-    public int getInstancedAbilityId() {
-      return instancedAbilityId_;
-    }
-
-    public static final int INSTANCED_MODIFIER_ID_FIELD_NUMBER = 12;
-    private int instancedModifierId_;
-    /**
-     * <code>uint32 instanced_modifier_id = 12;</code>
-     * @return The instancedModifierId.
-     */
-    @java.lang.Override
-    public int getInstancedModifierId() {
-      return instancedModifierId_;
-    }
-
-    public static final int LOCAL_ID_FIELD_NUMBER = 10;
-    private int localId_;
-    /**
-     * <code>int32 local_id = 10;</code>
-     * @return The localId.
-     */
-    @java.lang.Override
-    public int getLocalId() {
-      return localId_;
-    }
-
-    public static final int SERVER_BUFF_UID_FIELD_NUMBER = 14;
+    public static final int SERVER_BUFF_UID_FIELD_NUMBER = 1;
     private int serverBuffUid_;
     /**
-     * <code>uint32 server_buff_uid = 14;</code>
+     * <code>uint32 server_buff_uid = 1;</code>
      * @return The serverBuffUid.
      */
     @java.lang.Override
@@ -238,15 +183,70 @@ public final class AbilityInvokeEntryHeadOuterClass {
       return serverBuffUid_;
     }
 
-    public static final int TARGET_ID_FIELD_NUMBER = 3;
+    public static final int MODIFIER_CONFIG_LOCAL_ID_FIELD_NUMBER = 9;
+    private int modifierConfigLocalId_;
+    /**
+     * <code>int32 modifier_config_local_id = 9;</code>
+     * @return The modifierConfigLocalId.
+     */
+    @java.lang.Override
+    public int getModifierConfigLocalId() {
+      return modifierConfigLocalId_;
+    }
+
+    public static final int LOCAL_ID_FIELD_NUMBER = 6;
+    private int localId_;
+    /**
+     * <code>int32 local_id = 6;</code>
+     * @return The localId.
+     */
+    @java.lang.Override
+    public int getLocalId() {
+      return localId_;
+    }
+
+    public static final int TARGET_ID_FIELD_NUMBER = 4;
     private int targetId_;
     /**
-     * <code>uint32 target_id = 3;</code>
+     * <code>uint32 target_id = 4;</code>
      * @return The targetId.
      */
     @java.lang.Override
     public int getTargetId() {
       return targetId_;
+    }
+
+    public static final int IS_SERVERBUFF_MODIFIER_FIELD_NUMBER = 10;
+    private boolean isServerbuffModifier_;
+    /**
+     * <code>bool is_serverbuff_modifier = 10;</code>
+     * @return The isServerbuffModifier.
+     */
+    @java.lang.Override
+    public boolean getIsServerbuffModifier() {
+      return isServerbuffModifier_;
+    }
+
+    public static final int INSTANCED_ABILITY_ID_FIELD_NUMBER = 2;
+    private int instancedAbilityId_;
+    /**
+     * <code>uint32 instanced_ability_id = 2;</code>
+     * @return The instancedAbilityId.
+     */
+    @java.lang.Override
+    public int getInstancedAbilityId() {
+      return instancedAbilityId_;
+    }
+
+    public static final int INSTANCED_MODIFIER_ID_FIELD_NUMBER = 5;
+    private int instancedModifierId_;
+    /**
+     * <code>uint32 instanced_modifier_id = 5;</code>
+     * @return The instancedModifierId.
+     */
+    @java.lang.Override
+    public int getInstancedModifierId() {
+      return instancedModifierId_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -263,26 +263,26 @@ public final class AbilityInvokeEntryHeadOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (instancedAbilityId_ != 0) {
-        output.writeUInt32(1, instancedAbilityId_);
+      if (serverBuffUid_ != 0) {
+        output.writeUInt32(1, serverBuffUid_);
       }
-      if (isServerbuffModifier_ != false) {
-        output.writeBool(2, isServerbuffModifier_);
+      if (instancedAbilityId_ != 0) {
+        output.writeUInt32(2, instancedAbilityId_);
       }
       if (targetId_ != 0) {
-        output.writeUInt32(3, targetId_);
-      }
-      if (modifierConfigLocalId_ != 0) {
-        output.writeInt32(7, modifierConfigLocalId_);
-      }
-      if (localId_ != 0) {
-        output.writeInt32(10, localId_);
+        output.writeUInt32(4, targetId_);
       }
       if (instancedModifierId_ != 0) {
-        output.writeUInt32(12, instancedModifierId_);
+        output.writeUInt32(5, instancedModifierId_);
       }
-      if (serverBuffUid_ != 0) {
-        output.writeUInt32(14, serverBuffUid_);
+      if (localId_ != 0) {
+        output.writeInt32(6, localId_);
+      }
+      if (modifierConfigLocalId_ != 0) {
+        output.writeInt32(9, modifierConfigLocalId_);
+      }
+      if (isServerbuffModifier_ != false) {
+        output.writeBool(10, isServerbuffModifier_);
       }
       unknownFields.writeTo(output);
     }
@@ -293,33 +293,33 @@ public final class AbilityInvokeEntryHeadOuterClass {
       if (size != -1) return size;
 
       size = 0;
+      if (serverBuffUid_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, serverBuffUid_);
+      }
       if (instancedAbilityId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1, instancedAbilityId_);
-      }
-      if (isServerbuffModifier_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(2, isServerbuffModifier_);
+          .computeUInt32Size(2, instancedAbilityId_);
       }
       if (targetId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(3, targetId_);
-      }
-      if (modifierConfigLocalId_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(7, modifierConfigLocalId_);
-      }
-      if (localId_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(10, localId_);
+          .computeUInt32Size(4, targetId_);
       }
       if (instancedModifierId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(12, instancedModifierId_);
+          .computeUInt32Size(5, instancedModifierId_);
       }
-      if (serverBuffUid_ != 0) {
+      if (localId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(14, serverBuffUid_);
+          .computeInt32Size(6, localId_);
+      }
+      if (modifierConfigLocalId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(9, modifierConfigLocalId_);
+      }
+      if (isServerbuffModifier_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(10, isServerbuffModifier_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -336,20 +336,20 @@ public final class AbilityInvokeEntryHeadOuterClass {
       }
       emu.grasscutter.net.proto.AbilityInvokeEntryHeadOuterClass.AbilityInvokeEntryHead other = (emu.grasscutter.net.proto.AbilityInvokeEntryHeadOuterClass.AbilityInvokeEntryHead) obj;
 
+      if (getServerBuffUid()
+          != other.getServerBuffUid()) return false;
       if (getModifierConfigLocalId()
           != other.getModifierConfigLocalId()) return false;
+      if (getLocalId()
+          != other.getLocalId()) return false;
+      if (getTargetId()
+          != other.getTargetId()) return false;
       if (getIsServerbuffModifier()
           != other.getIsServerbuffModifier()) return false;
       if (getInstancedAbilityId()
           != other.getInstancedAbilityId()) return false;
       if (getInstancedModifierId()
           != other.getInstancedModifierId()) return false;
-      if (getLocalId()
-          != other.getLocalId()) return false;
-      if (getServerBuffUid()
-          != other.getServerBuffUid()) return false;
-      if (getTargetId()
-          != other.getTargetId()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -361,8 +361,14 @@ public final class AbilityInvokeEntryHeadOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SERVER_BUFF_UID_FIELD_NUMBER;
+      hash = (53 * hash) + getServerBuffUid();
       hash = (37 * hash) + MODIFIER_CONFIG_LOCAL_ID_FIELD_NUMBER;
       hash = (53 * hash) + getModifierConfigLocalId();
+      hash = (37 * hash) + LOCAL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getLocalId();
+      hash = (37 * hash) + TARGET_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getTargetId();
       hash = (37 * hash) + IS_SERVERBUFF_MODIFIER_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsServerbuffModifier());
@@ -370,12 +376,6 @@ public final class AbilityInvokeEntryHeadOuterClass {
       hash = (53 * hash) + getInstancedAbilityId();
       hash = (37 * hash) + INSTANCED_MODIFIER_ID_FIELD_NUMBER;
       hash = (53 * hash) + getInstancedModifierId();
-      hash = (37 * hash) + LOCAL_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getLocalId();
-      hash = (37 * hash) + SERVER_BUFF_UID_FIELD_NUMBER;
-      hash = (53 * hash) + getServerBuffUid();
-      hash = (37 * hash) + TARGET_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getTargetId();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -509,19 +509,19 @@ public final class AbilityInvokeEntryHeadOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        serverBuffUid_ = 0;
+
         modifierConfigLocalId_ = 0;
+
+        localId_ = 0;
+
+        targetId_ = 0;
 
         isServerbuffModifier_ = false;
 
         instancedAbilityId_ = 0;
 
         instancedModifierId_ = 0;
-
-        localId_ = 0;
-
-        serverBuffUid_ = 0;
-
-        targetId_ = 0;
 
         return this;
       }
@@ -549,13 +549,13 @@ public final class AbilityInvokeEntryHeadOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.AbilityInvokeEntryHeadOuterClass.AbilityInvokeEntryHead buildPartial() {
         emu.grasscutter.net.proto.AbilityInvokeEntryHeadOuterClass.AbilityInvokeEntryHead result = new emu.grasscutter.net.proto.AbilityInvokeEntryHeadOuterClass.AbilityInvokeEntryHead(this);
+        result.serverBuffUid_ = serverBuffUid_;
         result.modifierConfigLocalId_ = modifierConfigLocalId_;
+        result.localId_ = localId_;
+        result.targetId_ = targetId_;
         result.isServerbuffModifier_ = isServerbuffModifier_;
         result.instancedAbilityId_ = instancedAbilityId_;
         result.instancedModifierId_ = instancedModifierId_;
-        result.localId_ = localId_;
-        result.serverBuffUid_ = serverBuffUid_;
-        result.targetId_ = targetId_;
         onBuilt();
         return result;
       }
@@ -604,8 +604,17 @@ public final class AbilityInvokeEntryHeadOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.AbilityInvokeEntryHeadOuterClass.AbilityInvokeEntryHead other) {
         if (other == emu.grasscutter.net.proto.AbilityInvokeEntryHeadOuterClass.AbilityInvokeEntryHead.getDefaultInstance()) return this;
+        if (other.getServerBuffUid() != 0) {
+          setServerBuffUid(other.getServerBuffUid());
+        }
         if (other.getModifierConfigLocalId() != 0) {
           setModifierConfigLocalId(other.getModifierConfigLocalId());
+        }
+        if (other.getLocalId() != 0) {
+          setLocalId(other.getLocalId());
+        }
+        if (other.getTargetId() != 0) {
+          setTargetId(other.getTargetId());
         }
         if (other.getIsServerbuffModifier() != false) {
           setIsServerbuffModifier(other.getIsServerbuffModifier());
@@ -615,15 +624,6 @@ public final class AbilityInvokeEntryHeadOuterClass {
         }
         if (other.getInstancedModifierId() != 0) {
           setInstancedModifierId(other.getInstancedModifierId());
-        }
-        if (other.getLocalId() != 0) {
-          setLocalId(other.getLocalId());
-        }
-        if (other.getServerBuffUid() != 0) {
-          setServerBuffUid(other.getServerBuffUid());
-        }
-        if (other.getTargetId() != 0) {
-          setTargetId(other.getTargetId());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -654,9 +654,40 @@ public final class AbilityInvokeEntryHeadOuterClass {
         return this;
       }
 
+      private int serverBuffUid_ ;
+      /**
+       * <code>uint32 server_buff_uid = 1;</code>
+       * @return The serverBuffUid.
+       */
+      @java.lang.Override
+      public int getServerBuffUid() {
+        return serverBuffUid_;
+      }
+      /**
+       * <code>uint32 server_buff_uid = 1;</code>
+       * @param value The serverBuffUid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServerBuffUid(int value) {
+        
+        serverBuffUid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 server_buff_uid = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearServerBuffUid() {
+        
+        serverBuffUid_ = 0;
+        onChanged();
+        return this;
+      }
+
       private int modifierConfigLocalId_ ;
       /**
-       * <code>int32 modifier_config_local_id = 7;</code>
+       * <code>int32 modifier_config_local_id = 9;</code>
        * @return The modifierConfigLocalId.
        */
       @java.lang.Override
@@ -664,7 +695,7 @@ public final class AbilityInvokeEntryHeadOuterClass {
         return modifierConfigLocalId_;
       }
       /**
-       * <code>int32 modifier_config_local_id = 7;</code>
+       * <code>int32 modifier_config_local_id = 9;</code>
        * @param value The modifierConfigLocalId to set.
        * @return This builder for chaining.
        */
@@ -675,7 +706,7 @@ public final class AbilityInvokeEntryHeadOuterClass {
         return this;
       }
       /**
-       * <code>int32 modifier_config_local_id = 7;</code>
+       * <code>int32 modifier_config_local_id = 9;</code>
        * @return This builder for chaining.
        */
       public Builder clearModifierConfigLocalId() {
@@ -685,9 +716,71 @@ public final class AbilityInvokeEntryHeadOuterClass {
         return this;
       }
 
+      private int localId_ ;
+      /**
+       * <code>int32 local_id = 6;</code>
+       * @return The localId.
+       */
+      @java.lang.Override
+      public int getLocalId() {
+        return localId_;
+      }
+      /**
+       * <code>int32 local_id = 6;</code>
+       * @param value The localId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLocalId(int value) {
+        
+        localId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 local_id = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLocalId() {
+        
+        localId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int targetId_ ;
+      /**
+       * <code>uint32 target_id = 4;</code>
+       * @return The targetId.
+       */
+      @java.lang.Override
+      public int getTargetId() {
+        return targetId_;
+      }
+      /**
+       * <code>uint32 target_id = 4;</code>
+       * @param value The targetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTargetId(int value) {
+        
+        targetId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 target_id = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTargetId() {
+        
+        targetId_ = 0;
+        onChanged();
+        return this;
+      }
+
       private boolean isServerbuffModifier_ ;
       /**
-       * <code>bool is_serverbuff_modifier = 2;</code>
+       * <code>bool is_serverbuff_modifier = 10;</code>
        * @return The isServerbuffModifier.
        */
       @java.lang.Override
@@ -695,7 +788,7 @@ public final class AbilityInvokeEntryHeadOuterClass {
         return isServerbuffModifier_;
       }
       /**
-       * <code>bool is_serverbuff_modifier = 2;</code>
+       * <code>bool is_serverbuff_modifier = 10;</code>
        * @param value The isServerbuffModifier to set.
        * @return This builder for chaining.
        */
@@ -706,7 +799,7 @@ public final class AbilityInvokeEntryHeadOuterClass {
         return this;
       }
       /**
-       * <code>bool is_serverbuff_modifier = 2;</code>
+       * <code>bool is_serverbuff_modifier = 10;</code>
        * @return This builder for chaining.
        */
       public Builder clearIsServerbuffModifier() {
@@ -718,7 +811,7 @@ public final class AbilityInvokeEntryHeadOuterClass {
 
       private int instancedAbilityId_ ;
       /**
-       * <code>uint32 instanced_ability_id = 1;</code>
+       * <code>uint32 instanced_ability_id = 2;</code>
        * @return The instancedAbilityId.
        */
       @java.lang.Override
@@ -726,7 +819,7 @@ public final class AbilityInvokeEntryHeadOuterClass {
         return instancedAbilityId_;
       }
       /**
-       * <code>uint32 instanced_ability_id = 1;</code>
+       * <code>uint32 instanced_ability_id = 2;</code>
        * @param value The instancedAbilityId to set.
        * @return This builder for chaining.
        */
@@ -737,7 +830,7 @@ public final class AbilityInvokeEntryHeadOuterClass {
         return this;
       }
       /**
-       * <code>uint32 instanced_ability_id = 1;</code>
+       * <code>uint32 instanced_ability_id = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearInstancedAbilityId() {
@@ -749,7 +842,7 @@ public final class AbilityInvokeEntryHeadOuterClass {
 
       private int instancedModifierId_ ;
       /**
-       * <code>uint32 instanced_modifier_id = 12;</code>
+       * <code>uint32 instanced_modifier_id = 5;</code>
        * @return The instancedModifierId.
        */
       @java.lang.Override
@@ -757,7 +850,7 @@ public final class AbilityInvokeEntryHeadOuterClass {
         return instancedModifierId_;
       }
       /**
-       * <code>uint32 instanced_modifier_id = 12;</code>
+       * <code>uint32 instanced_modifier_id = 5;</code>
        * @param value The instancedModifierId to set.
        * @return This builder for chaining.
        */
@@ -768,105 +861,12 @@ public final class AbilityInvokeEntryHeadOuterClass {
         return this;
       }
       /**
-       * <code>uint32 instanced_modifier_id = 12;</code>
+       * <code>uint32 instanced_modifier_id = 5;</code>
        * @return This builder for chaining.
        */
       public Builder clearInstancedModifierId() {
         
         instancedModifierId_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int localId_ ;
-      /**
-       * <code>int32 local_id = 10;</code>
-       * @return The localId.
-       */
-      @java.lang.Override
-      public int getLocalId() {
-        return localId_;
-      }
-      /**
-       * <code>int32 local_id = 10;</code>
-       * @param value The localId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setLocalId(int value) {
-        
-        localId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int32 local_id = 10;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearLocalId() {
-        
-        localId_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int serverBuffUid_ ;
-      /**
-       * <code>uint32 server_buff_uid = 14;</code>
-       * @return The serverBuffUid.
-       */
-      @java.lang.Override
-      public int getServerBuffUid() {
-        return serverBuffUid_;
-      }
-      /**
-       * <code>uint32 server_buff_uid = 14;</code>
-       * @param value The serverBuffUid to set.
-       * @return This builder for chaining.
-       */
-      public Builder setServerBuffUid(int value) {
-        
-        serverBuffUid_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 server_buff_uid = 14;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearServerBuffUid() {
-        
-        serverBuffUid_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int targetId_ ;
-      /**
-       * <code>uint32 target_id = 3;</code>
-       * @return The targetId.
-       */
-      @java.lang.Override
-      public int getTargetId() {
-        return targetId_;
-      }
-      /**
-       * <code>uint32 target_id = 3;</code>
-       * @param value The targetId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setTargetId(int value) {
-        
-        targetId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 target_id = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearTargetId() {
-        
-        targetId_ = 0;
         onChanged();
         return this;
       }
@@ -938,12 +938,12 @@ public final class AbilityInvokeEntryHeadOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\034AbilityInvokeEntryHead.proto\"\325\001\n\026Abili" +
-      "tyInvokeEntryHead\022 \n\030modifier_config_loc" +
-      "al_id\030\007 \001(\005\022\036\n\026is_serverbuff_modifier\030\002 " +
-      "\001(\010\022\034\n\024instanced_ability_id\030\001 \001(\r\022\035\n\025ins" +
-      "tanced_modifier_id\030\014 \001(\r\022\020\n\010local_id\030\n \001" +
-      "(\005\022\027\n\017server_buff_uid\030\016 \001(\r\022\021\n\ttarget_id" +
-      "\030\003 \001(\rB\033\n\031emu.grasscutter.net.protob\006pro" +
+      "tyInvokeEntryHead\022\027\n\017server_buff_uid\030\001 \001" +
+      "(\r\022 \n\030modifier_config_local_id\030\t \001(\005\022\020\n\010" +
+      "local_id\030\006 \001(\005\022\021\n\ttarget_id\030\004 \001(\r\022\036\n\026is_" +
+      "serverbuff_modifier\030\n \001(\010\022\034\n\024instanced_a" +
+      "bility_id\030\002 \001(\r\022\035\n\025instanced_modifier_id" +
+      "\030\005 \001(\rB\033\n\031emu.grasscutter.net.protob\006pro" +
       "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -955,7 +955,7 @@ public final class AbilityInvokeEntryHeadOuterClass {
     internal_static_AbilityInvokeEntryHead_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_AbilityInvokeEntryHead_descriptor,
-        new java.lang.String[] { "ModifierConfigLocalId", "IsServerbuffModifier", "InstancedAbilityId", "InstancedModifierId", "LocalId", "ServerBuffUid", "TargetId", });
+        new java.lang.String[] { "ServerBuffUid", "ModifierConfigLocalId", "LocalId", "TargetId", "IsServerbuffModifier", "InstancedAbilityId", "InstancedModifierId", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

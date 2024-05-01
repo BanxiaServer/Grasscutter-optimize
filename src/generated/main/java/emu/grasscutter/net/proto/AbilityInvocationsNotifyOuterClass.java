@@ -43,13 +43,6 @@ public final class AbilityInvocationsNotifyOuterClass {
         int index);
   }
   /**
-   * <pre>
-   * CmdId: 1198
-   * EnetChannelId: 0
-   * EnetIsReliable: false
-   * IsAllowClient: true
-   * </pre>
-   *
    * Protobuf type {@code AbilityInvocationsNotify}
    */
   public static final class AbilityInvocationsNotify extends
@@ -338,13 +331,6 @@ public final class AbilityInvocationsNotifyOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 1198
-     * EnetChannelId: 0
-     * EnetIsReliable: false
-     * IsAllowClient: true
-     * </pre>
-     *
      * Protobuf type {@code AbilityInvocationsNotify}
      */
     public static final class Builder extends

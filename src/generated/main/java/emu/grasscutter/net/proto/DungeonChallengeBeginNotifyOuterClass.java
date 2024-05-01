@@ -19,45 +19,21 @@ public final class DungeonChallengeBeginNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 father_index = 5;</code>
-     * @return The fatherIndex.
-     */
-    int getFatherIndex();
-
-    /**
-     * <code>repeated uint32 param_list = 14;</code>
+     * <code>repeated uint32 param_list = 4;</code>
      * @return A list containing the paramList.
      */
     java.util.List<java.lang.Integer> getParamListList();
     /**
-     * <code>repeated uint32 param_list = 14;</code>
+     * <code>repeated uint32 param_list = 4;</code>
      * @return The count of paramList.
      */
     int getParamListCount();
     /**
-     * <code>repeated uint32 param_list = 14;</code>
+     * <code>repeated uint32 param_list = 4;</code>
      * @param index The index of the element to return.
      * @return The paramList at the given index.
      */
     int getParamList(int index);
-
-    /**
-     * <code>uint32 challenge_index = 6;</code>
-     * @return The challengeIndex.
-     */
-    int getChallengeIndex();
-
-    /**
-     * <code>uint32 challenge_id = 1;</code>
-     * @return The challengeId.
-     */
-    int getChallengeId();
-
-    /**
-     * <code>uint32 group_id = 4;</code>
-     * @return The groupId.
-     */
-    int getGroupId();
 
     /**
      * <code>repeated uint32 uid_list = 12;</code>
@@ -75,15 +51,32 @@ public final class DungeonChallengeBeginNotifyOuterClass {
      * @return The uidList at the given index.
      */
     int getUidList(int index);
+
+    /**
+     * <code>uint32 challenge_id = 10;</code>
+     * @return The challengeId.
+     */
+    int getChallengeId();
+
+    /**
+     * <code>uint32 group_id = 8;</code>
+     * @return The groupId.
+     */
+    int getGroupId();
+
+    /**
+     * <code>uint32 father_index = 5;</code>
+     * @return The fatherIndex.
+     */
+    int getFatherIndex();
+
+    /**
+     * <code>uint32 challenge_index = 11;</code>
+     * @return The challengeIndex.
+     */
+    int getChallengeIndex();
   }
   /**
-   * <pre>
-   * CmdId: 947
-   * EnetChannelId: 0
-   * EnetIsReliable: false
-   * IsAllowClient: true
-   * </pre>
-   *
    * Protobuf type {@code DungeonChallengeBeginNotify}
    */
   public static final class DungeonChallengeBeginNotify extends
@@ -131,14 +124,25 @@ public final class DungeonChallengeBeginNotifyOuterClass {
             case 0:
               done = true;
               break;
-            case 8: {
-
-              challengeId_ = input.readUInt32();
+            case 32: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                paramList_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              paramList_.addInt(input.readUInt32());
               break;
             }
-            case 32: {
-
-              groupId_ = input.readUInt32();
+            case 34: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+                paramList_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                paramList_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
               break;
             }
             case 40: {
@@ -146,7 +150,17 @@ public final class DungeonChallengeBeginNotifyOuterClass {
               fatherIndex_ = input.readUInt32();
               break;
             }
-            case 48: {
+            case 64: {
+
+              groupId_ = input.readUInt32();
+              break;
+            }
+            case 80: {
+
+              challengeId_ = input.readUInt32();
+              break;
+            }
+            case 88: {
 
               challengeIndex_ = input.readUInt32();
               break;
@@ -172,27 +186,6 @@ public final class DungeonChallengeBeginNotifyOuterClass {
               input.popLimit(limit);
               break;
             }
-            case 112: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                paramList_ = newIntList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              paramList_.addInt(input.readUInt32());
-              break;
-            }
-            case 114: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
-                paramList_ = newIntList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                paramList_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -208,11 +201,11 @@ public final class DungeonChallengeBeginNotifyOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
-          uidList_.makeImmutable(); // C
-        }
         if (((mutable_bitField0_ & 0x00000001) != 0)) {
           paramList_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          uidList_.makeImmutable(); // C
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -231,21 +224,10 @@ public final class DungeonChallengeBeginNotifyOuterClass {
               emu.grasscutter.net.proto.DungeonChallengeBeginNotifyOuterClass.DungeonChallengeBeginNotify.class, emu.grasscutter.net.proto.DungeonChallengeBeginNotifyOuterClass.DungeonChallengeBeginNotify.Builder.class);
     }
 
-    public static final int FATHER_INDEX_FIELD_NUMBER = 5;
-    private int fatherIndex_;
-    /**
-     * <code>uint32 father_index = 5;</code>
-     * @return The fatherIndex.
-     */
-    @java.lang.Override
-    public int getFatherIndex() {
-      return fatherIndex_;
-    }
-
-    public static final int PARAM_LIST_FIELD_NUMBER = 14;
+    public static final int PARAM_LIST_FIELD_NUMBER = 4;
     private com.google.protobuf.Internal.IntList paramList_;
     /**
-     * <code>repeated uint32 param_list = 14;</code>
+     * <code>repeated uint32 param_list = 4;</code>
      * @return A list containing the paramList.
      */
     @java.lang.Override
@@ -254,14 +236,14 @@ public final class DungeonChallengeBeginNotifyOuterClass {
       return paramList_;
     }
     /**
-     * <code>repeated uint32 param_list = 14;</code>
+     * <code>repeated uint32 param_list = 4;</code>
      * @return The count of paramList.
      */
     public int getParamListCount() {
       return paramList_.size();
     }
     /**
-     * <code>repeated uint32 param_list = 14;</code>
+     * <code>repeated uint32 param_list = 4;</code>
      * @param index The index of the element to return.
      * @return The paramList at the given index.
      */
@@ -269,39 +251,6 @@ public final class DungeonChallengeBeginNotifyOuterClass {
       return paramList_.getInt(index);
     }
     private int paramListMemoizedSerializedSize = -1;
-
-    public static final int CHALLENGE_INDEX_FIELD_NUMBER = 6;
-    private int challengeIndex_;
-    /**
-     * <code>uint32 challenge_index = 6;</code>
-     * @return The challengeIndex.
-     */
-    @java.lang.Override
-    public int getChallengeIndex() {
-      return challengeIndex_;
-    }
-
-    public static final int CHALLENGE_ID_FIELD_NUMBER = 1;
-    private int challengeId_;
-    /**
-     * <code>uint32 challenge_id = 1;</code>
-     * @return The challengeId.
-     */
-    @java.lang.Override
-    public int getChallengeId() {
-      return challengeId_;
-    }
-
-    public static final int GROUP_ID_FIELD_NUMBER = 4;
-    private int groupId_;
-    /**
-     * <code>uint32 group_id = 4;</code>
-     * @return The groupId.
-     */
-    @java.lang.Override
-    public int getGroupId() {
-      return groupId_;
-    }
 
     public static final int UID_LIST_FIELD_NUMBER = 12;
     private com.google.protobuf.Internal.IntList uidList_;
@@ -331,6 +280,50 @@ public final class DungeonChallengeBeginNotifyOuterClass {
     }
     private int uidListMemoizedSerializedSize = -1;
 
+    public static final int CHALLENGE_ID_FIELD_NUMBER = 10;
+    private int challengeId_;
+    /**
+     * <code>uint32 challenge_id = 10;</code>
+     * @return The challengeId.
+     */
+    @java.lang.Override
+    public int getChallengeId() {
+      return challengeId_;
+    }
+
+    public static final int GROUP_ID_FIELD_NUMBER = 8;
+    private int groupId_;
+    /**
+     * <code>uint32 group_id = 8;</code>
+     * @return The groupId.
+     */
+    @java.lang.Override
+    public int getGroupId() {
+      return groupId_;
+    }
+
+    public static final int FATHER_INDEX_FIELD_NUMBER = 5;
+    private int fatherIndex_;
+    /**
+     * <code>uint32 father_index = 5;</code>
+     * @return The fatherIndex.
+     */
+    @java.lang.Override
+    public int getFatherIndex() {
+      return fatherIndex_;
+    }
+
+    public static final int CHALLENGE_INDEX_FIELD_NUMBER = 11;
+    private int challengeIndex_;
+    /**
+     * <code>uint32 challenge_index = 11;</code>
+     * @return The challengeIndex.
+     */
+    @java.lang.Override
+    public int getChallengeIndex() {
+      return challengeIndex_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -346,17 +339,24 @@ public final class DungeonChallengeBeginNotifyOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
-      if (challengeId_ != 0) {
-        output.writeUInt32(1, challengeId_);
+      if (getParamListList().size() > 0) {
+        output.writeUInt32NoTag(34);
+        output.writeUInt32NoTag(paramListMemoizedSerializedSize);
       }
-      if (groupId_ != 0) {
-        output.writeUInt32(4, groupId_);
+      for (int i = 0; i < paramList_.size(); i++) {
+        output.writeUInt32NoTag(paramList_.getInt(i));
       }
       if (fatherIndex_ != 0) {
         output.writeUInt32(5, fatherIndex_);
       }
+      if (groupId_ != 0) {
+        output.writeUInt32(8, groupId_);
+      }
+      if (challengeId_ != 0) {
+        output.writeUInt32(10, challengeId_);
+      }
       if (challengeIndex_ != 0) {
-        output.writeUInt32(6, challengeIndex_);
+        output.writeUInt32(11, challengeIndex_);
       }
       if (getUidListList().size() > 0) {
         output.writeUInt32NoTag(98);
@@ -364,13 +364,6 @@ public final class DungeonChallengeBeginNotifyOuterClass {
       }
       for (int i = 0; i < uidList_.size(); i++) {
         output.writeUInt32NoTag(uidList_.getInt(i));
-      }
-      if (getParamListList().size() > 0) {
-        output.writeUInt32NoTag(114);
-        output.writeUInt32NoTag(paramListMemoizedSerializedSize);
-      }
-      for (int i = 0; i < paramList_.size(); i++) {
-        output.writeUInt32NoTag(paramList_.getInt(i));
       }
       unknownFields.writeTo(output);
     }
@@ -381,21 +374,35 @@ public final class DungeonChallengeBeginNotifyOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (challengeId_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1, challengeId_);
-      }
-      if (groupId_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(4, groupId_);
+      {
+        int dataSize = 0;
+        for (int i = 0; i < paramList_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(paramList_.getInt(i));
+        }
+        size += dataSize;
+        if (!getParamListList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        paramListMemoizedSerializedSize = dataSize;
       }
       if (fatherIndex_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(5, fatherIndex_);
       }
+      if (groupId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(8, groupId_);
+      }
+      if (challengeId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(10, challengeId_);
+      }
       if (challengeIndex_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(6, challengeIndex_);
+          .computeUInt32Size(11, challengeIndex_);
       }
       {
         int dataSize = 0;
@@ -410,20 +417,6 @@ public final class DungeonChallengeBeginNotifyOuterClass {
               .computeInt32SizeNoTag(dataSize);
         }
         uidListMemoizedSerializedSize = dataSize;
-      }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < paramList_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
-            .computeUInt32SizeNoTag(paramList_.getInt(i));
-        }
-        size += dataSize;
-        if (!getParamListList().isEmpty()) {
-          size += 1;
-          size += com.google.protobuf.CodedOutputStream
-              .computeInt32SizeNoTag(dataSize);
-        }
-        paramListMemoizedSerializedSize = dataSize;
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -440,18 +433,18 @@ public final class DungeonChallengeBeginNotifyOuterClass {
       }
       emu.grasscutter.net.proto.DungeonChallengeBeginNotifyOuterClass.DungeonChallengeBeginNotify other = (emu.grasscutter.net.proto.DungeonChallengeBeginNotifyOuterClass.DungeonChallengeBeginNotify) obj;
 
-      if (getFatherIndex()
-          != other.getFatherIndex()) return false;
       if (!getParamListList()
           .equals(other.getParamListList())) return false;
-      if (getChallengeIndex()
-          != other.getChallengeIndex()) return false;
+      if (!getUidListList()
+          .equals(other.getUidListList())) return false;
       if (getChallengeId()
           != other.getChallengeId()) return false;
       if (getGroupId()
           != other.getGroupId()) return false;
-      if (!getUidListList()
-          .equals(other.getUidListList())) return false;
+      if (getFatherIndex()
+          != other.getFatherIndex()) return false;
+      if (getChallengeIndex()
+          != other.getChallengeIndex()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -463,22 +456,22 @@ public final class DungeonChallengeBeginNotifyOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + FATHER_INDEX_FIELD_NUMBER;
-      hash = (53 * hash) + getFatherIndex();
       if (getParamListCount() > 0) {
         hash = (37 * hash) + PARAM_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getParamListList().hashCode();
       }
-      hash = (37 * hash) + CHALLENGE_INDEX_FIELD_NUMBER;
-      hash = (53 * hash) + getChallengeIndex();
-      hash = (37 * hash) + CHALLENGE_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getChallengeId();
-      hash = (37 * hash) + GROUP_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getGroupId();
       if (getUidListCount() > 0) {
         hash = (37 * hash) + UID_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getUidListList().hashCode();
       }
+      hash = (37 * hash) + CHALLENGE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getChallengeId();
+      hash = (37 * hash) + GROUP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getGroupId();
+      hash = (37 * hash) + FATHER_INDEX_FIELD_NUMBER;
+      hash = (53 * hash) + getFatherIndex();
+      hash = (37 * hash) + CHALLENGE_INDEX_FIELD_NUMBER;
+      hash = (53 * hash) + getChallengeIndex();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -575,13 +568,6 @@ public final class DungeonChallengeBeginNotifyOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 947
-     * EnetChannelId: 0
-     * EnetIsReliable: false
-     * IsAllowClient: true
-     * </pre>
-     *
      * Protobuf type {@code DungeonChallengeBeginNotify}
      */
     public static final class Builder extends
@@ -619,18 +605,18 @@ public final class DungeonChallengeBeginNotifyOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        fatherIndex_ = 0;
-
         paramList_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000001);
-        challengeIndex_ = 0;
-
+        uidList_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000002);
         challengeId_ = 0;
 
         groupId_ = 0;
 
-        uidList_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        fatherIndex_ = 0;
+
+        challengeIndex_ = 0;
+
         return this;
       }
 
@@ -658,20 +644,20 @@ public final class DungeonChallengeBeginNotifyOuterClass {
       public emu.grasscutter.net.proto.DungeonChallengeBeginNotifyOuterClass.DungeonChallengeBeginNotify buildPartial() {
         emu.grasscutter.net.proto.DungeonChallengeBeginNotifyOuterClass.DungeonChallengeBeginNotify result = new emu.grasscutter.net.proto.DungeonChallengeBeginNotifyOuterClass.DungeonChallengeBeginNotify(this);
         int from_bitField0_ = bitField0_;
-        result.fatherIndex_ = fatherIndex_;
         if (((bitField0_ & 0x00000001) != 0)) {
           paramList_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.paramList_ = paramList_;
-        result.challengeIndex_ = challengeIndex_;
-        result.challengeId_ = challengeId_;
-        result.groupId_ = groupId_;
         if (((bitField0_ & 0x00000002) != 0)) {
           uidList_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.uidList_ = uidList_;
+        result.challengeId_ = challengeId_;
+        result.groupId_ = groupId_;
+        result.fatherIndex_ = fatherIndex_;
+        result.challengeIndex_ = challengeIndex_;
         onBuilt();
         return result;
       }
@@ -720,9 +706,6 @@ public final class DungeonChallengeBeginNotifyOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.DungeonChallengeBeginNotifyOuterClass.DungeonChallengeBeginNotify other) {
         if (other == emu.grasscutter.net.proto.DungeonChallengeBeginNotifyOuterClass.DungeonChallengeBeginNotify.getDefaultInstance()) return this;
-        if (other.getFatherIndex() != 0) {
-          setFatherIndex(other.getFatherIndex());
-        }
         if (!other.paramList_.isEmpty()) {
           if (paramList_.isEmpty()) {
             paramList_ = other.paramList_;
@@ -733,15 +716,6 @@ public final class DungeonChallengeBeginNotifyOuterClass {
           }
           onChanged();
         }
-        if (other.getChallengeIndex() != 0) {
-          setChallengeIndex(other.getChallengeIndex());
-        }
-        if (other.getChallengeId() != 0) {
-          setChallengeId(other.getChallengeId());
-        }
-        if (other.getGroupId() != 0) {
-          setGroupId(other.getGroupId());
-        }
         if (!other.uidList_.isEmpty()) {
           if (uidList_.isEmpty()) {
             uidList_ = other.uidList_;
@@ -751,6 +725,18 @@ public final class DungeonChallengeBeginNotifyOuterClass {
             uidList_.addAll(other.uidList_);
           }
           onChanged();
+        }
+        if (other.getChallengeId() != 0) {
+          setChallengeId(other.getChallengeId());
+        }
+        if (other.getGroupId() != 0) {
+          setGroupId(other.getGroupId());
+        }
+        if (other.getFatherIndex() != 0) {
+          setFatherIndex(other.getFatherIndex());
+        }
+        if (other.getChallengeIndex() != 0) {
+          setChallengeIndex(other.getChallengeIndex());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -782,37 +768,6 @@ public final class DungeonChallengeBeginNotifyOuterClass {
       }
       private int bitField0_;
 
-      private int fatherIndex_ ;
-      /**
-       * <code>uint32 father_index = 5;</code>
-       * @return The fatherIndex.
-       */
-      @java.lang.Override
-      public int getFatherIndex() {
-        return fatherIndex_;
-      }
-      /**
-       * <code>uint32 father_index = 5;</code>
-       * @param value The fatherIndex to set.
-       * @return This builder for chaining.
-       */
-      public Builder setFatherIndex(int value) {
-        
-        fatherIndex_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 father_index = 5;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearFatherIndex() {
-        
-        fatherIndex_ = 0;
-        onChanged();
-        return this;
-      }
-
       private com.google.protobuf.Internal.IntList paramList_ = emptyIntList();
       private void ensureParamListIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
@@ -821,7 +776,7 @@ public final class DungeonChallengeBeginNotifyOuterClass {
          }
       }
       /**
-       * <code>repeated uint32 param_list = 14;</code>
+       * <code>repeated uint32 param_list = 4;</code>
        * @return A list containing the paramList.
        */
       public java.util.List<java.lang.Integer>
@@ -830,14 +785,14 @@ public final class DungeonChallengeBeginNotifyOuterClass {
                  java.util.Collections.unmodifiableList(paramList_) : paramList_;
       }
       /**
-       * <code>repeated uint32 param_list = 14;</code>
+       * <code>repeated uint32 param_list = 4;</code>
        * @return The count of paramList.
        */
       public int getParamListCount() {
         return paramList_.size();
       }
       /**
-       * <code>repeated uint32 param_list = 14;</code>
+       * <code>repeated uint32 param_list = 4;</code>
        * @param index The index of the element to return.
        * @return The paramList at the given index.
        */
@@ -845,7 +800,7 @@ public final class DungeonChallengeBeginNotifyOuterClass {
         return paramList_.getInt(index);
       }
       /**
-       * <code>repeated uint32 param_list = 14;</code>
+       * <code>repeated uint32 param_list = 4;</code>
        * @param index The index to set the value at.
        * @param value The paramList to set.
        * @return This builder for chaining.
@@ -858,7 +813,7 @@ public final class DungeonChallengeBeginNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 param_list = 14;</code>
+       * <code>repeated uint32 param_list = 4;</code>
        * @param value The paramList to add.
        * @return This builder for chaining.
        */
@@ -869,7 +824,7 @@ public final class DungeonChallengeBeginNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 param_list = 14;</code>
+       * <code>repeated uint32 param_list = 4;</code>
        * @param values The paramList to add.
        * @return This builder for chaining.
        */
@@ -882,105 +837,12 @@ public final class DungeonChallengeBeginNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 param_list = 14;</code>
+       * <code>repeated uint32 param_list = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearParamList() {
         paramList_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-        return this;
-      }
-
-      private int challengeIndex_ ;
-      /**
-       * <code>uint32 challenge_index = 6;</code>
-       * @return The challengeIndex.
-       */
-      @java.lang.Override
-      public int getChallengeIndex() {
-        return challengeIndex_;
-      }
-      /**
-       * <code>uint32 challenge_index = 6;</code>
-       * @param value The challengeIndex to set.
-       * @return This builder for chaining.
-       */
-      public Builder setChallengeIndex(int value) {
-        
-        challengeIndex_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 challenge_index = 6;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearChallengeIndex() {
-        
-        challengeIndex_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int challengeId_ ;
-      /**
-       * <code>uint32 challenge_id = 1;</code>
-       * @return The challengeId.
-       */
-      @java.lang.Override
-      public int getChallengeId() {
-        return challengeId_;
-      }
-      /**
-       * <code>uint32 challenge_id = 1;</code>
-       * @param value The challengeId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setChallengeId(int value) {
-        
-        challengeId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 challenge_id = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearChallengeId() {
-        
-        challengeId_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int groupId_ ;
-      /**
-       * <code>uint32 group_id = 4;</code>
-       * @return The groupId.
-       */
-      @java.lang.Override
-      public int getGroupId() {
-        return groupId_;
-      }
-      /**
-       * <code>uint32 group_id = 4;</code>
-       * @param value The groupId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setGroupId(int value) {
-        
-        groupId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 group_id = 4;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearGroupId() {
-        
-        groupId_ = 0;
         onChanged();
         return this;
       }
@@ -1063,6 +925,130 @@ public final class DungeonChallengeBeginNotifyOuterClass {
         onChanged();
         return this;
       }
+
+      private int challengeId_ ;
+      /**
+       * <code>uint32 challenge_id = 10;</code>
+       * @return The challengeId.
+       */
+      @java.lang.Override
+      public int getChallengeId() {
+        return challengeId_;
+      }
+      /**
+       * <code>uint32 challenge_id = 10;</code>
+       * @param value The challengeId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChallengeId(int value) {
+        
+        challengeId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 challenge_id = 10;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearChallengeId() {
+        
+        challengeId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int groupId_ ;
+      /**
+       * <code>uint32 group_id = 8;</code>
+       * @return The groupId.
+       */
+      @java.lang.Override
+      public int getGroupId() {
+        return groupId_;
+      }
+      /**
+       * <code>uint32 group_id = 8;</code>
+       * @param value The groupId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGroupId(int value) {
+        
+        groupId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 group_id = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGroupId() {
+        
+        groupId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int fatherIndex_ ;
+      /**
+       * <code>uint32 father_index = 5;</code>
+       * @return The fatherIndex.
+       */
+      @java.lang.Override
+      public int getFatherIndex() {
+        return fatherIndex_;
+      }
+      /**
+       * <code>uint32 father_index = 5;</code>
+       * @param value The fatherIndex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFatherIndex(int value) {
+        
+        fatherIndex_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 father_index = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFatherIndex() {
+        
+        fatherIndex_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int challengeIndex_ ;
+      /**
+       * <code>uint32 challenge_index = 11;</code>
+       * @return The challengeIndex.
+       */
+      @java.lang.Override
+      public int getChallengeIndex() {
+        return challengeIndex_;
+      }
+      /**
+       * <code>uint32 challenge_index = 11;</code>
+       * @param value The challengeIndex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChallengeIndex(int value) {
+        
+        challengeIndex_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 challenge_index = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearChallengeIndex() {
+        
+        challengeIndex_ = 0;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1131,10 +1117,10 @@ public final class DungeonChallengeBeginNotifyOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n!DungeonChallengeBeginNotify.proto\"\232\001\n\033" +
-      "DungeonChallengeBeginNotify\022\024\n\014father_in" +
-      "dex\030\005 \001(\r\022\022\n\nparam_list\030\016 \003(\r\022\027\n\017challen" +
-      "ge_index\030\006 \001(\r\022\024\n\014challenge_id\030\001 \001(\r\022\020\n\010" +
-      "group_id\030\004 \001(\r\022\020\n\010uid_list\030\014 \003(\rB\033\n\031emu." +
+      "DungeonChallengeBeginNotify\022\022\n\nparam_lis" +
+      "t\030\004 \003(\r\022\020\n\010uid_list\030\014 \003(\r\022\024\n\014challenge_i" +
+      "d\030\n \001(\r\022\020\n\010group_id\030\010 \001(\r\022\024\n\014father_inde" +
+      "x\030\005 \001(\r\022\027\n\017challenge_index\030\013 \001(\rB\033\n\031emu." +
       "grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -1146,7 +1132,7 @@ public final class DungeonChallengeBeginNotifyOuterClass {
     internal_static_DungeonChallengeBeginNotify_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_DungeonChallengeBeginNotify_descriptor,
-        new java.lang.String[] { "FatherIndex", "ParamList", "ChallengeIndex", "ChallengeId", "GroupId", "UidList", });
+        new java.lang.String[] { "ParamList", "UidList", "ChallengeId", "GroupId", "FatherIndex", "ChallengeIndex", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
